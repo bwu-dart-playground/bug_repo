@@ -1,0 +1,8 @@
+name: angular_polymer_test
+environment:
+#  sdk: '1.15.0'
+dependencies:
+  polymer: '1.0.0-rc.16'
+  angular2: '2.0.0-beta.15'
+#  protobuf: 0.5.1
+  crypto: ^1.0.0

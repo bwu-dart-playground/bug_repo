@@ -1,0 +1,14 @@
+name: event_impl_instead_of_custom_event
+
+dependencies:
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+  polymer: 1.0.0-rc.17
+
+transformers:
+- polymer:
+    entry_points:
+    - web/index2.html
+
+
+- dart_to_js_script_rewriter
