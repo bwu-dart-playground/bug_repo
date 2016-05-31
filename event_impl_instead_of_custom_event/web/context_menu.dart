@@ -12,8 +12,12 @@ class ContextMenu extends PolymerElement {
 
   static const String contextMenuSelect = 'context-menu-select';
 
-  static const EventStreamProvider<CustomEvent> _contextMenuSelect =
-      const EventStreamProvider<CustomEvent>(contextMenuSelect);
+//  static const EventStreamProvider<CustomEvent> _contextMenuSelect =
+//      const EventStreamProvider<CustomEvent>(contextMenuSelect);
+
+  static const EventStreamProvider _contextMenuSelect =
+      const EventStreamProvider(contextMenuSelect);
+
 
     Stream<CustomEvent> get onContextMenuSelect =>
       ContextMenu._contextMenuSelect.forTarget(this);
@@ -24,7 +28,8 @@ class ContextMenu extends PolymerElement {
       print(e);
     });
     onClick.listen((MouseEvent e) {
-      fire(ContextMenu.contextMenuSelect);
+      //fire(ContextMenu.contextMenuSelect);
+      dispatchEvent(new CustomEvent(ContextMenu.contextMenuSelect));
     });
   }
 }
